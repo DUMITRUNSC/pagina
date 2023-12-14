@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumitru Nasco Ciobanu</title>
+    <link rel="stylesheet" href="paginaPrincipal.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dumitru Nasco Ciobanu</h1>
+        <p>Estudiante Desarrollo de Aplicaciones Multiplataforma</p>
+    </header>
+    <nav>
+        <button id="contact">Datos de Contacto</button>
+        <button id="knowledge">Conocimientos de Programación</button>
+        <button id="linkedin">LinkedIn</button>
+        <button id="cv">Currículum</button>
+        <button id="github">GitHub</button>
+    </nav>
+    <script>
+        document.getElementById('contact').addEventListener('click', function () {
+            window.location.href = 'datos.html';
+        });
+        document.getElementById('knowledge').addEventListener('click', function () {
+            window.location.href = 'conocimientos.html';
+        });
+        document.getElementById('linkedin').addEventListener('click', function () {
+            window.location.href = 'https://www.linkedin.com/in/dumitru-nasco-466a6b179/';
+        });
+        document.getElementById('cv').addEventListener('click', function () {
+            window.location.href = 'CV_CebanuNascoDumitru.pdf';
+        });
+        document.getElementById('github').addEventListener('click', function () {
+            window.location.href = 'https://github.com/DUMITRUNSC';
+        });
+    </script>
+
+    <footer>
+        <p>Derechos reservados © 2023</p>
+    </footer>
+</body>
+
+</html>

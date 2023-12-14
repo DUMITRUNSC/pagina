@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Contacto</title>
+    <link rel="stylesheet" href="datos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Datos de Contacto</h1>
+    </header>
+    <nav>
+        <button id="telefono">Telefono</button>
+        <button id="email">Email</button>
+        <button id="linkedin">LinkedIn</button>
+    
+    </nav>
+    <script>
+        document.getElementById('email').addEventListener('click', function () {
+            window.location.href = 'mailto:nascodumitru@gmail.com';
+        });
+        document.getElementById('telefono').addEventListener('click', function () {
+            window.location.href = 'tel:+34-637-69-68-13';
+        });
+        document.getElementById('linkedin').addEventListener('click', function () {
+            window.location.href = 'https://www.linkedin.com/in/dumitru-nasco-466a6b179/';
+        });
+    </script>
+
+    <footer>
+        <p>Derechos reservados © 2023</p>
+    </footer>
+</body>
+
+</html>

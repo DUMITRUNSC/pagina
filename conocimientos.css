@@ -1,0 +1,83 @@
+/* Reset básico para estilos de navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del contenedor para centrar el contenido */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilos para la cabecera */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para los títulos principales */
+.heading {
+    color: #fff;
+}
+
+/* Estilos para las secciones principales */
+.skills,
+.courses {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos de las secciones */
+.section-title .heading {
+    color: #4CAF50;
+    margin-bottom: 40px;
+    /* Aumentado de 20px a 40px para añadir más espacio */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* Estilos para las listas de habilidades y cursos */
+.skills-list,
+.courses-list {
+    list-style: none;
+}
+
+/* Estilos para cada habilidad y curso */
+.skill,
+.course {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    /* Se eliminó 'position: fixed;' y 'bottom: 0;' para que el footer sea estático */
+}
+
+/* Estilo para el texto de derechos de autor en el footer */
+footer .copyright {
+    margin-top: 10px;
+}
