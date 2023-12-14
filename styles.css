@@ -6,10 +6,31 @@
 }
 
 /* Estilo general del cuerpo de la página */
-body {
+body,
+html {
+    height: 100%;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estilos para la cabecera y footer */
+header,
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Estilo para el footer fijo */
+footer {
+    position: fixed;
+    bottom: 0;
 }
 
 /* Estilo del contenedor para centrar el contenido */
@@ -19,17 +40,34 @@ body {
     overflow: hidden;
 }
 
-/* Estilos para la cabecera */
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
 /* Estilo para los títulos principales */
 .heading {
     color: #fff;
+}
+
+/* Estilos para nav y los botones */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #000080;
+    color: white;
+    border: none;
+    padding: 25px 60px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 60%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 /* Estilos para las secciones principales */
@@ -46,7 +84,6 @@ header {
 .section-title .heading {
     color: #4CAF50;
     margin-bottom: 40px;
-    /* Aumentado de 20px a 40px para añadir más espacio */
     padding-bottom: 10px;
     border-bottom: 2px solid #4CAF50;
 }
@@ -57,16 +94,6 @@ header {
     list-style: none;
 }
 
-/* Estilos para cada habilidad y curso */
-.skill,
-.course {
-    background: #f4f4f4;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
 /* Estilos para el footer */
 footer {
     background-color: #000;
@@ -74,10 +101,9 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    /* Se eliminó 'position: fixed;' y 'bottom: 0;' para que el footer sea estático */
 }
 
 /* Estilo para el texto de derechos de autor en el footer */
-footer .copyright {
+footer p {
     margin-top: 10px;
 }
