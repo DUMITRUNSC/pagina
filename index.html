@@ -4,21 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dumitru Nasco Ciobanu</title>
+    <title>Portafolio de Dumitru Nasco Ciobanu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body  class="flexible-footer">
     <header>
-        <h1>Dumitru Nasco Ciobanu</h1>
-        <p>Estudiante Desarrollo de Aplicaciones Multiplataforma</p>
+        <div class="profile-container">
+            <div class="profile-pic">
+                <!-- La imagen debe ir aquí -->
+                <img src="foto.jpg" alt="Dumitru Nasco Ciobanu">
+            </div>
+            <div class="profile-info">
+                <h1>Dumitru Nasco Ciobanu</h1>
+                <h3>Estudiante Desarrollo de Aplicaciones Multiplataforma</h3>
+            </div>
+        </div>
     </header>
+
     <nav>
         <button id="contact">Datos de Contacto</button>
         <button id="knowledge">Conocimientos de Programación</button>
         <button id="cv">Currículum</button>
         <button id="github">GitHub</button>
     </nav>
+
+    <footer>
+        <p>Derechos de reserva 2023</p>
+    </footer>
     <script>
         document.getElementById('contact').addEventListener('click', function () {
             window.location.href = 'datos.html';
@@ -33,10 +46,6 @@
             window.location.href = 'https://github.com/DUMITRUNSC';
         });
     </script>
-
-    <footer>
-        <p>Derechos reservados © 2023</p>
-    </footer>
 </body>
 
 </html>

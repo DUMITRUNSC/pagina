@@ -1,140 +1,162 @@
 /* Importación de fuentes externas */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Reset básico para estilos de navegador */
+/* Estilo global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo base para el cuerpo de la página y HTML */
-body,
-html {
+html,
+body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
-/* Estilos para la cabecera y footer */
-header,
-footer {
-    background-color: #123456;
+/* Estilos para la cabecera */
+header {
+    background-color: #053f4b;
+    /* Mantengo tu color de fondo */
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
+    position: relative;
 }
 
-/* Estilo para el footer fijo */
-footer {
-    position: fixed;
-    bottom: 0;
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Estilos para el contenedor principal */
-.container {
-    max-width: 1200px;
-    width: 80%;
-    margin: auto;
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    /* Ajustar según la imagen */
+    height: 150px;
     overflow: hidden;
-    padding: 0 20px;
+    border: 3px solid #000;
+    /* Borde negro para el círculo */
+    display: inline-block;
 }
 
-/* Estilos para los títulos de sección y cabecera */
-.heading {
-    color: #fff;
-    border-bottom: 3px solid #4CAF50;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Estilos para la navegación y botones */
+.profile-info {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Estilos para la navegación */
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    margin: 30px 0;
 }
 
-button {
-    background-color: #4CAF50;
+nav button {
+    background-color: #19a01d;
+    /* Mantengo tu color de fondo */
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 24px;
+    margin: 10px 0;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    width: 60%;
-    max-width: 200px;
-    margin: 10px;
-    /* Margen alrededor de cada botón */
+    font-size: 1.1em;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-    background-color: #367C2B;
-    transform: scale(1.05);
+nav button:hover {
+    background-color: #a9a9a9;
+    /* Mantengo tu color de hover */
 }
 
-/* Estilos para secciones de habilidades y cursos */
+/* Estilos para el pie de página */
+footer {
+    background-color: #34495e;
+    /* Color azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    /* Cambiado de 'absolute' a 'relative' */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Asegúrate de que el contenido anterior al footer tenga suficiente espacio */
+main {
+    min-height: calc(100vh - 160px);
+    /* Ajusta este valor según el tamaño de tu header y footer */
+    padding-bottom: 40px;
+    /* Espacio extra para el footer */
+}
+
+
+/* Estilos para las secciones de habilidades, cursos y herramientas de programación */
 .skills,
-.courses {
+.courses,
+.programming-tools {
     background-color: #fff;
+    /* Fondo blanco */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para botón de alternancia específico */
-.toggle-button {
-    display: block;
-    background: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.toggle-button:hover {
-    background: #45a049;
-}
-
-/* Clase para ocultar contenido */
-.hidden {
-    display: none;
+/* Estilos para los títulos de las secciones */
+.skills h2,
+.programming-tools h2,
+.courses h2 {
+    color: #333;
+    font-weight: 700;
 }
 
 /* Estilos para listas de habilidades y cursos */
 .skills-list,
 .courses-list {
     list-style: none;
+    padding-left: 0;
+    /* Remueve el padding por defecto */
 }
 
-/* Estilos para el footer */
-footer p {
-    margin-top: 10px;
+.skills-list li,
+.courses-list li {
+    background-color: #ecf0f1;
+    /* Color gris claro para los items */
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 10px;
 }
 
-/* Estilos de diseño responsivo */
+/* Estilos responsivos */
 @media screen and (max-width: 768px) {
-    button {
-        width: 80%;
-        /* Ancho más grande para pantallas más pequeñas */
-        padding: 10px 20px;
+    .container {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    button {
+    .container {
+        width: 95%;
+    }
+
+    nav button {
         width: 100%;
-        /* Ancho completo en dispositivos muy pequeños */
+        /* Botones ocupan todo el ancho en pantallas más pequeñas */
     }
 }
