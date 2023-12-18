@@ -88,6 +88,27 @@ button:hover {
     border-bottom: 2px solid #4CAF50;
 }
 
+/* Estilos de Botón Específico */
+.toggle-button {
+    display: block;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.toggle-button:hover {
+    background: #45a049;
+}
+
+/* Clase para ocultar contenido */
+.hidden {
+    display: none;
+}
+
 /* Estilos para las listas de habilidades y cursos */
 .skills-list,
 .courses-list {
@@ -106,4 +127,69 @@ footer {
 /* Estilo para el texto de derechos de autor en el footer */
 footer p {
     margin-top: 10px;
+}
+
+/* Importar una fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    /* Color de texto más suave */
+}
+
+header,
+footer {
+    background-color: #123456;
+    /* Un color sólido más profesional */
+    color: #ffffff;
+}
+
+button {
+    background-color: #4CAF50;
+    /* Un color verde más vibrante */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #367C2B;
+    transform: scale(1.05);
+    /* Efecto de crecimiento al pasar el mouse */
+}
+
+.container {
+    max-width: 1200px;
+    /* Ancho máximo para grandes pantallas */
+    padding: 0 20px;
+    /* Espaciado interno */
+}
+
+.skills,
+.courses {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title .heading {
+    border-bottom: 3px solid #4CAF50;
+}
+
+/* Estilos para diseño responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        width: auto;
+    }
+
+    button {
+        width: 100%;
+        /* Botones de ancho completo en dispositivos móviles */
+        padding: 10px;
+    }
 }
