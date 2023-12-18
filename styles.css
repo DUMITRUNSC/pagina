@@ -1,3 +1,6 @@
+/* Importación de fuentes externas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Reset básico para estilos de navegador */
 * {
     margin: 0;
@@ -5,13 +8,16 @@
     box-sizing: border-box;
 }
 
-/* Estilo general del cuerpo de la página */
+/* Estilo base para el cuerpo de la página y HTML */
 body,
 html {
     height: 100%;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /* Fuente Roboto sobreescrita en Arial */
     line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
+    /* Color de texto suavizado */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -20,7 +26,8 @@ html {
 /* Estilos para la cabecera y footer */
 header,
 footer {
-    background-color: #000;
+    background-color: #123456;
+    /* Color de fondo unificado */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -33,19 +40,29 @@ footer {
     bottom: 0;
 }
 
-/* Estilo del contenedor para centrar el contenido */
+/* Estilos para el contenedor principal */
 .container {
+    max-width: 1200px;
+    /* Ancho máximo para grandes pantallas */
     width: 80%;
+    /* Ancho general para el contenedor */
     margin: auto;
     overflow: hidden;
+    padding: 0 20px;
+    /* Espaciado interno */
 }
 
-/* Estilo para los títulos principales */
+/* Estilos para los títulos de sección y cabecera */
 .heading {
     color: #fff;
+    /* Color de texto para títulos */
+    border-bottom: 3px solid #4CAF50;
+    /* Línea debajo del título de sección */
+    margin-bottom: 40px;
+    padding-bottom: 10px;
 }
 
-/* Estilos para nav y los botones */
+/* Estilos para la navegación y botones */
 nav {
     display: flex;
     flex-direction: column;
@@ -54,41 +71,37 @@ nav {
 }
 
 button {
-    background-color: #000080;
+    background-color: #4CAF50;
+    /* Color de fondo para botones */
     color: white;
     border: none;
-    padding: 25px 60px;
-    margin: 10px 0;
+    padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transiciones para efectos */
     width: 60%;
     max-width: 200px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #367C2B;
+    /* Color al pasar el mouse */
+    transform: scale(1.05);
+    /* Escalar botón al pasar el mouse */
 }
 
-/* Estilos para las secciones principales */
+/* Estilos para secciones de habilidades y cursos */
 .skills,
 .courses {
     background-color: #fff;
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los títulos de las secciones */
-.section-title .heading {
-    color: #4CAF50;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #4CAF50;
-}
-
-/* Estilos de Botón Específico */
+/* Estilos para botón de alternancia específico */
 .toggle-button {
     display: block;
     background: #4CAF50;
@@ -109,82 +122,23 @@ button:hover {
     display: none;
 }
 
-/* Estilos para las listas de habilidades y cursos */
+/* Estilos para listas de habilidades y cursos */
 .skills-list,
 .courses-list {
     list-style: none;
 }
 
 /* Estilos para el footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-}
-
-/* Estilo para el texto de derechos de autor en el footer */
 footer p {
     margin-top: 10px;
+    /* Margen superior para texto de derechos de autor */
 }
 
-/* Importar una fuente de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body,
-html {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    /* Color de texto más suave */
-}
-
-header,
-footer {
-    background-color: #123456;
-    /* Un color sólido más profesional */
-    color: #ffffff;
-}
-
-button {
-    background-color: #4CAF50;
-    /* Un color verde más vibrante */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #367C2B;
-    transform: scale(1.05);
-    /* Efecto de crecimiento al pasar el mouse */
-}
-
-.container {
-    max-width: 1200px;
-    /* Ancho máximo para grandes pantallas */
-    padding: 0 20px;
-    /* Espaciado interno */
-}
-
-.skills,
-.courses {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.section-title .heading {
-    border-bottom: 3px solid #4CAF50;
-}
-
-/* Estilos para diseño responsive */
+/* Estilos de diseño responsivo */
 @media screen and (max-width: 768px) {
     .container {
         width: auto;
+        /* Ancho automático para dispositivos móviles */
     }
 
     button {
