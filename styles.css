@@ -13,11 +13,9 @@ body,
 html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    /* Fuente Roboto sobreescrita en Arial */
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    /* Color de texto suavizado */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -27,7 +25,6 @@ html {
 header,
 footer {
     background-color: #123456;
-    /* Color de fondo unificado */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -43,21 +40,16 @@ footer {
 /* Estilos para el contenedor principal */
 .container {
     max-width: 1200px;
-    /* Ancho máximo para grandes pantallas */
     width: 80%;
-    /* Ancho general para el contenedor */
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
-    /* Espaciado interno */
 }
 
 /* Estilos para los títulos de sección y cabecera */
 .heading {
     color: #fff;
-    /* Color de texto para títulos */
     border-bottom: 3px solid #4CAF50;
-    /* Línea debajo del título de sección */
     margin-bottom: 40px;
     padding-bottom: 10px;
 }
@@ -72,23 +64,21 @@ nav {
 
 button {
     background-color: #4CAF50;
-    /* Color de fondo para botones */
     color: white;
     border: none;
     padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    /* Transiciones para efectos */
     width: 60%;
     max-width: 200px;
+    margin: 10px;
+    /* Margen alrededor de cada botón */
 }
 
 button:hover {
     background-color: #367C2B;
-    /* Color al pasar el mouse */
     transform: scale(1.05);
-    /* Escalar botón al pasar el mouse */
 }
 
 /* Estilos para secciones de habilidades y cursos */
@@ -131,19 +121,20 @@ button:hover {
 /* Estilos para el footer */
 footer p {
     margin-top: 10px;
-    /* Margen superior para texto de derechos de autor */
 }
 
 /* Estilos de diseño responsivo */
 @media screen and (max-width: 768px) {
-    .container {
-        width: auto;
-        /* Ancho automático para dispositivos móviles */
+    button {
+        width: 80%;
+        /* Ancho más grande para pantallas más pequeñas */
+        padding: 10px 20px;
     }
+}
 
+@media screen and (max-width: 480px) {
     button {
         width: 100%;
-        /* Botones de ancho completo en dispositivos móviles */
-        padding: 10px;
+        /* Ancho completo en dispositivos muy pequeños */
     }
 }
