@@ -10,24 +10,28 @@
 
 html,
 body {
-    height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Estilos para la cabecera */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     background-color: #053f4b;
-    /* Mantengo tu color de fondo */
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
 }
 
 .profile-container {
     display: flex;
+    flex-direction: column;
+    /* Cambio para mobile */
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -36,12 +40,11 @@ header {
 .profile-pic {
     border-radius: 50%;
     width: 150px;
-    /* Ajustar según la imagen */
+    /* Ajustable según la imagen */
     height: 150px;
     overflow: hidden;
     border: 3px solid #000;
     /* Borde negro para el círculo */
-    display: inline-block;
 }
 
 .profile-pic img {
@@ -51,22 +54,21 @@ header {
 }
 
 .profile-info {
-    display: inline-block;
-    text-align: left;
+    text-align: center;
 }
 
-/* Estilos para la navegación */
 nav {
     display: flex;
     flex-direction: column;
+    /* Alineación vertical para mobile */
     align-items: center;
     justify-content: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
+/* Estilos existentes para botones */
 nav button {
     background-color: #19a01d;
-    /* Mantengo tu color de fondo */
     color: white;
     border: none;
     padding: 12px 24px;
@@ -76,49 +78,38 @@ nav button {
     transition: background-color 0.3s, transform 0.3s;
     font-size: 1.1em;
     width: 250px;
+    /* Ancho fijo para pantallas grandes */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav button:hover {
     background-color: #a9a9a9;
-    /* Mantengo tu color de hover */
 }
 
-/* Estilos para el pie de página */
 footer {
     background-color: #34495e;
-    /* Color azul oscuro */
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    /* Cambiado de 'absolute' a 'relative' */
-    bottom: 0;
-    width: 100%;
 }
 
-/* Asegúrate de que el contenido anterior al footer tenga suficiente espacio */
 main {
-    min-height: calc(100vh - 160px);
-    /* Ajusta este valor según el tamaño de tu header y footer */
-    padding-bottom: 40px;
-    /* Espacio extra para el footer */
+    flex: 1;
+    padding: 20px;
 }
 
-
-/* Estilos para las secciones de habilidades, cursos y herramientas de programación */
+/* Secciones de habilidades, cursos y herramientas de programación */
 .skills,
 .courses,
 .programming-tools {
     background-color: #fff;
-    /* Fondo blanco */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los títulos de las secciones */
+/* Títulos de las secciones */
 .skills h2,
 .programming-tools h2,
 .courses h2 {
@@ -126,37 +117,32 @@ main {
     font-weight: 700;
 }
 
-/* Estilos para listas de habilidades y cursos */
+/* Listas de habilidades y cursos */
 .skills-list,
 .courses-list {
     list-style: none;
     padding-left: 0;
-    /* Remueve el padding por defecto */
 }
 
 .skills-list li,
 .courses-list li {
     background-color: #ecf0f1;
-    /* Color gris claro para los items */
     border-radius: 5px;
     margin: 8px 0;
     padding: 10px;
 }
 
-/* Estilos responsivos */
+/* Estilos responsivos para diferentes tamaños de pantalla */
 @media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
+    nav button {
+        width: 70%;
+        /* Ancho reducido para pantallas medianas (tabletas) */
     }
 }
 
 @media screen and (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-
     nav button {
-        width: 100%;
-        /* Botones ocupan todo el ancho en pantallas más pequeñas */
+        width: 90%;
+        /* Ancho ajustado para pantallas pequeñas (móviles) */
     }
 }
